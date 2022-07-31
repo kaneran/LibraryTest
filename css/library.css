@@ -1,0 +1,33 @@
+﻿.container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    background-color: ghostwhite;
+    
+}
+
+.item {
+    margin: 10px;
+    width: 100px;
+    padding: 10px;
+    outline-color: black;
+    outline-style: solid;
+    background-color: lightgreen;
+    flex: 1 1 auto;
+    order: 2;
+}
+
+h1{
+    font-family:Arial;
+    font-size: large;
+    background-color: mediumseagreen;
+}
+
+body{
+    font-family:Arial;
+    font-size: medium
+}
+
+#bookList{
+    left: 0px;
+}
