@@ -1,1 +1,0 @@
-Used C# and LINQ to create an API to get common words from a book and rendered the API responses to a UI that was builts using only HTML, CSS and JavaScript. Unit tests was created for the C# code produced. No frameworks or external libraries was used in this test.
