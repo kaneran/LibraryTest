@@ -1,0 +1,8 @@
+﻿For C# we usually put unit tests into a separate project. 
+By doing this you separate production code (which gets shipped), and test code (which does not).
+Therefore, keep the size of the artifact down, separation of concerns, and fewer dependencies in the 
+Prod code.
+
+In other languages test code is located side by side with the prod code (Angular). There are aguments for it
+e.g. easier to manager a test if its right next to the prod code. But with Angular the test code will not be
+made part of the final artifact when transpiled (webpack.js ?)

@@ -154,6 +154,7 @@
     <Content Include="Resources\The Hound Of The Baskervilles.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\comments.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
