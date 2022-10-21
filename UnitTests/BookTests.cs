@@ -32,5 +32,12 @@ namespace Library.Tests
             Assert.Greater(common.Count(), 0);
         }
 
+        [Test]
+        public void GetBooks_3()
+        {
+            var books = repository.GetBooks_3();
+            Assert.Greater(books.Count(), 0);
+            Assert.AreEqual(books[0].Title, "A Tale Of Two Cities");
+        }
     }
 }

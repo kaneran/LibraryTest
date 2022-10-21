@@ -10,7 +10,7 @@ namespace Library.Controllers
     [RoutePrefix("api/books")]
     public class BooksController : ApiController
     {
-		/*
+        /*
 		The following GET methods are expected on the api/books controller:
 
 			1. GET api/books
@@ -30,24 +30,29 @@ namespace Library.Controllers
 		The logic for these calls should largely be encapsulated in other classes. This should make it easier to Unit Test those classes
 		to validate the expected behaviour.
 		*/
-		private BookRepository bookRepository;
-		private BookService bookService;
+        private BookRepository bookRepository;
+        private BookService bookService;
+
         public BooksController()
         {
-			bookRepository = new BookRepository();
-			bookService = new BookService();
+            // You need to jump through hoops to use DI in .netframework. Weird this
+            // task template was not setup in .net core
+            bookRepository = new BookRepository();
+            bookService = new BookService();
         }
-		public List<Book> GetBooks()
+
+        public List<Book> GetBooks()
         {
-			var books = bookRepository.GetBooks();
-			return books;
+            // I don't think this method can be reached?
+            var books = bookRepository.GetBooks();
+            return books;
         }
 
         [Route("{id}")]
-		public List<CommonWord> GetCommonWords(int id)
+        public List<CommonWord> GetCommonWords(int id)
         {
-			var common = bookService.GetCommonWords(id);
-			return common;
+            var common = bookService.GetCommonWords(id);
+            return common;
         }
-	}
+    }
 }
